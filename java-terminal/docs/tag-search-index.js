@@ -1,0 +1,1 @@
+tagSearchIndex = [{"l":"Calculadora","h":"class Calculadora","d":"Section","u":"Calculadora.html#calculadora-heading"},{"l":"Exemplo de mitigar um código mal elaborado","h":"Comentarios.somaMultiplica(int, int, String)","d":"Section","u":"Comentarios.html#exemplo-de-mitigar-um-c-digo-mal-elaborado-heading"}];updateSearchResults();
