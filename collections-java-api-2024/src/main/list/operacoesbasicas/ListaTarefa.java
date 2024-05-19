@@ -28,12 +28,27 @@ public class ListaTarefa {
         tarefaList.removeAll(tarefasParaRemover);
 
     }
-    public int obterNumeroTotalTarefas(){
+
+    public int obterNumeroTotalTarefas() {
         return this.tarefaList.size();
+
     }
-    public void obterDescricoesTarefas(){
+
+    public void obterDescricoesTarefas() {
         for (Tarefa t : tarefaList) {
             System.out.println(t.getDescricao());
         }
     }
+
+    public static void main(String[] args) {
+        ListaTarefa listaTarefa = new ListaTarefa();
+        listaTarefa.adicionarTarefa("Estudar Java");
+        listaTarefa.adicionarTarefa("Estudar C#");
+        listaTarefa.adicionarTarefa("Estudar Python");
+        listaTarefa.removerTarefa("Estudar Java");
+        listaTarefa.obterDescricoesTarefas();
+        System.out.printf("O número total de lista de tarefa é %d", listaTarefa.obterNumeroTotalTarefas());
+
+    }
+
 }
