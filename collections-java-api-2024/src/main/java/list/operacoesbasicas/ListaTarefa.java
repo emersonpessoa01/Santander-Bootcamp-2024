@@ -1,4 +1,4 @@
-package main.list.operacoesbasicas;
+package main.java.list.operacoesbasicas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,8 @@ public class ListaTarefa {
 
     // Método p/ adicionar elemento dentro do ArrayList
     public void adicionarTarefa(String descricao) {
-        this.tarefaList.add(new Tarefa(descricao));
+        Tarefa tarefa = new Tarefa(descricao);
+        this.tarefaList.add(tarefa);
     }
 
     public void removerTarefa(String descricao) {
@@ -40,14 +41,25 @@ public class ListaTarefa {
         }
     }
 
+    @Override
+    public String toString() {
+        return "CarrinhoDeCompras{" +
+                "tarefas=" + tarefaList +
+                '}';
+    }
+
     public static void main(String[] args) {
+        // Criando uma instância da classe ListaTarefa
         ListaTarefa listaTarefa = new ListaTarefa();
+
+        // Adicionando tarefas à lista
         listaTarefa.adicionarTarefa("Estudar Java");
-        listaTarefa.adicionarTarefa("Estudar C#");
         listaTarefa.adicionarTarefa("Estudar Python");
         listaTarefa.removerTarefa("Estudar Java");
         listaTarefa.obterDescricoesTarefas();
-        System.out.printf("O número total de lista de tarefa é %d", listaTarefa.obterNumeroTotalTarefas());
+        System.out.printf("O número total de lista de tarefa é %d \n", listaTarefa.obterNumeroTotalTarefas());
+
+        System.out.println(listaTarefa.toString());
 
     }
 

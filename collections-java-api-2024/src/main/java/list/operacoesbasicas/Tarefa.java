@@ -1,4 +1,4 @@
-package main.list.operacoesbasicas;
+package main.java.list.operacoesbasicas;
 
 public class Tarefa {
     // Atributo
@@ -15,11 +15,5 @@ public class Tarefa {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
-    @Override
-    public String toString() {
-        return "Tarefa [descricao=" + descricao + "]";
-    }
-    
 
 }
