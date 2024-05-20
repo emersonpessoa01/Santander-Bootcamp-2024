@@ -43,9 +43,7 @@ public class ListaTarefa {
 
     @Override
     public String toString() {
-        return "CarrinhoDeCompras{" +
-                "tarefas=" + tarefaList +
-                '}';
+        return "ListaTarefa [tarefaList=" + tarefaList + "]";
     }
 
     public static void main(String[] args) {
