@@ -15,10 +15,11 @@ public class Contato {
     public int getNumero() {
         return numero;
     }
-    
+
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
     
 
     @Override
@@ -26,6 +27,7 @@ public class Contato {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+        result = prime * result + numero;
         return result;
     }
 
@@ -43,20 +45,14 @@ public class Contato {
                 return false;
         } else if (!nome.equals(other.nome))
             return false;
+        if (numero != other.numero)
+            return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "Contato [nome=" + nome + ", numero=" + numero + "]";
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
+        return "{" + nome + "," + numero + "}";
     }
 
 }

@@ -33,10 +33,11 @@ public class AgendaContato {
         }
         return contatosPorNome;
     }
-    public Contato atualizarNumeroContato(String nome, int novoNumero){
+
+    public Contato atualizarNumeroContato(String nome, int novoNumero) {
         Contato contatoAtualizado = null;
-        for(Contato c: contatoSet){
-            if(c.getNome().equalsIgnoreCase(nome)){
+        for (Contato c : contatoSet) {
+            if (c.getNome().equalsIgnoreCase(nome)) {
                 c.setNumero(novoNumero);
                 contatoAtualizado = c;
                 break;
@@ -44,4 +45,22 @@ public class AgendaContato {
         }
         return contatoAtualizado;
     }
+
+    public static void main(String[] args) {
+        AgendaContato agendaContatos = new AgendaContato();
+        agendaContatos.exibirContato();
+
+        agendaContatos.adicionarContato("Emerson", 123456);
+        agendaContatos.adicionarContato("Emerson", 5665);
+        agendaContatos.adicionarContato("Emerson Pessoa", 11111111);
+        agendaContatos.adicionarContato("Emerson DIO", 654987);
+        agendaContatos.adicionarContato("Luciene Ferreira", 11111111);
+        agendaContatos.exibirContato();
+
+        System.out.println(agendaContatos.pesquisarPorNome("Emerson"));
+
+        System.out.println(agendaContatos.atualizarNumeroContato("Luciene Ferreita",
+                5555555));
+    }
+
 }
