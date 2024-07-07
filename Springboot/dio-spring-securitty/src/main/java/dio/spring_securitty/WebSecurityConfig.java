@@ -33,7 +33,7 @@ public class WebSecurityConfig {
                 );
         return http.build();
     }
-
+/*
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withDefaultPasswordEncoder()
@@ -50,4 +50,6 @@ public class WebSecurityConfig {
 
         return new InMemoryUserDetailsManager(user, admin);
     }
+    */
+
 }
